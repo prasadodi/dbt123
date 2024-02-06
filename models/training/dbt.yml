@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: dbt_emp
-    database: dbt_web
-    schema: 
+    database: DBT_WEB
+    schema: DBT_SRC
     tables:
       - name: Employee
     freshness: 
