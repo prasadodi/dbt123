@@ -36,6 +36,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
+  pre-hook:'{{update_rundate()}}'
+  post-hook:'{{dbt_log_table()}}' 
   my_new_project:
     # Applies to all files under models/example/
     example:
